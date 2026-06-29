@@ -1,5 +1,5 @@
 /* ============================================================
-   BetterHomes Dubai — Main JS (shared across all pages)
+   Betterhomes Dubai — Main JS (shared across all pages)
    ============================================================ */
 
 /* --- Nav scroll behaviour --------------------------------- */
