@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BetterHomes — Dubai's Trusted Property Experts Since 1986</title>
+  <meta name="description" content="Discover Dubai's most exclusive residential developments. BetterHomes has guided families and investors since 1986.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ====== NAVIGATION ====== -->
+<nav class="nav">
+  <div class="container">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Better<span>Homes</span></a>
+      <ul class="nav__links">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="listings.html" class="nav__link">Listings</a></li>
+        <li><a href="calculator.html" class="nav__link">Calculator</a></li>
+        <li><a href="compare.html" class="nav__link">Compare</a></li>
+        <li>
+          <a href="saved.html" class="nav__link">
+            ♡ Saved
+            <span class="nav__saved-count" id="savedCount"></span>
+          </a>
+        </li>
+      </ul>
+      <button class="nav__hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile">
+      <a href="index.html" class="nav__link">Home</a>
+      <a href="listings.html" class="nav__link">Listings</a>
+      <a href="calculator.html" class="nav__link">Calculator</a>
+      <a href="compare.html" class="nav__link">Compare</a>
+      <a href="saved.html" class="nav__link">♡ Saved <span class="nav__saved-count"></span></a>
+    </div>
+  </div>
+</nav>
+
+<!-- ====== HERO ====== -->
+<section class="hero">
+  <div class="hero__bg"></div>
+  <div class="container">
+    <div class="hero__content">
+      <div class="hero__tag">✦ Exclusive Properties · Dubai</div>
+      <h1 class="hero__title">
+        Dubai's Most <em>Coveted</em><br>Addresses, Curated<br>For You
+      </h1>
+      <p class="hero__subtitle">
+        For nearly four decades, BetterHomes has connected discerning buyers with Dubai's finest residential developments — from Creek-front towers to branded ultra-luxury residences.
+      </p>
+      <div class="hero__cta">
+        <a href="listings.html" class="btn btn--primary">View Properties</a>
+        <a href="calculator.html" class="btn btn--outline">Mortgage Calculator</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero__stats">
+    <div class="container">
+      <div class="hero__stats-inner">
+        <div>
+          <div class="hero__stat-value">1986</div>
+          <div class="hero__stat-label">Established</div>
+        </div>
+        <div>
+          <div class="hero__stat-value">35,000+</div>
+          <div class="hero__stat-label">Properties Listed</div>
+        </div>
+        <div>
+          <div class="hero__stat-value">AED 3.2B+</div>
+          <div class="hero__stat-label">Transacted in 2024</div>
+        </div>
+        <div>
+          <div class="hero__stat-value">14+</div>
+          <div class="hero__stat-label">Industry Awards</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== TRUST STRIP ====== -->
+<section class="trust">
+  <div class="container">
+    <div class="trust__grid">
+      <div class="trust__item">
+        <div class="trust__icon">🏆</div>
+        <div class="trust__value">38</div>
+        <div class="trust__label">Years in Dubai</div>
+      </div>
+      <div class="trust__item">
+        <div class="trust__icon">🏘</div>
+        <div class="trust__value">35,000+</div>
+        <div class="trust__label">Active Listings</div>
+      </div>
+      <div class="trust__item">
+        <div class="trust__icon">👥</div>
+        <div class="trust__value">800+</div>
+        <div class="trust__label">Expert Agents</div>
+      </div>
+      <div class="trust__item">
+        <div class="trust__icon">⭐</div>
+        <div class="trust__value">4.8★</div>
+        <div class="trust__label">Client Rating</div>
+      </div>
+      <div class="trust__item">
+        <div class="trust__icon">🌍</div>
+        <div class="trust__value">92</div>
+        <div class="trust__label">Nationalities Served</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== FEATURED PROJECTS ====== -->
+<section class="section">
+  <div class="container">
+    <div class="section-heading">
+      <div class="section-heading__label">Exclusive Developments</div>
+      <h2 class="section-heading__title">Featured Listings</h2>
+      <p class="section-heading__subtitle">Three landmark developments. Hand-selected by our specialists for their design, location and investment potential.</p>
+    </div>
+    <div class="featured-grid" id="featuredGrid"></div>
+  </div>
+</section>
+
+<!-- ====== WHY BETTERHOMES ====== -->
+<section class="section section--grey">
+  <div class="container">
+    <div class="section-heading section-heading--center">
+      <div class="section-heading__label">Why Choose Us</div>
+      <h2 class="section-heading__title">Dubai's Trusted Property Experts</h2>
+      <p class="section-heading__subtitle">We go beyond transactions — we build lasting relationships rooted in trust, expertise and an unrivalled knowledge of Dubai real estate.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2rem;margin-top:1rem;">
+      <div style="background:#fff;padding:2rem;border-radius:8px;box-shadow:var(--shadow-sm);border:1px solid var(--mid-grey);">
+        <div style="font-size:2rem;margin-bottom:1rem;">🔑</div>
+        <h3 style="color:var(--navy);margin-bottom:0.5rem;">Exclusive Access</h3>
+        <p style="color:var(--text-muted);font-size:0.9rem;line-height:1.7;">Off-plan launches before they reach the market, plus developer relationships that unlock unit allocations the public never sees.</p>
+      </div>
+      <div style="background:#fff;padding:2rem;border-radius:8px;box-shadow:var(--shadow-sm);border:1px solid var(--mid-grey);">
+        <div style="font-size:2rem;margin-bottom:1rem;">📊</div>
+        <h3 style="color:var(--navy);margin-bottom:0.5rem;">Data-Led Advice</h3>
+        <p style="color:var(--text-muted);font-size:0.9rem;line-height:1.7;">Our in-house research team tracks transaction data across every community, so every recommendation is backed by numbers, not guesswork.</p>
+      </div>
+      <div style="background:#fff;padding:2rem;border-radius:8px;box-shadow:var(--shadow-sm);border:1px solid var(--mid-grey);">
+        <div style="font-size:2rem;margin-bottom:1rem;">🤝</div>
+        <h3 style="color:var(--navy);margin-bottom:0.5rem;">End-to-End Service</h3>
+        <p style="color:var(--text-muted);font-size:0.9rem;line-height:1.7;">From your first search to handover keys — mortgage advisory, legal support and property management under one roof.</p>
+      </div>
+      <div style="background:#fff;padding:2rem;border-radius:8px;box-shadow:var(--shadow-sm);border:1px solid var(--mid-grey);">
+        <div style="font-size:2rem;margin-bottom:1rem;">🏅</div>
+        <h3 style="color:var(--navy);margin-bottom:0.5rem;">Award-Winning</h3>
+        <p style="color:var(--text-muted);font-size:0.9rem;line-height:1.7;">14 industry awards including Best Real Estate Agency — Dubai, Arabian Business Awards, and RERA's highest compliance rating.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== SAMPLE LISTINGS ====== -->
+<section class="section">
+  <div class="container">
+    <div class="section-heading d-flex justify-between align-center" style="flex-wrap:wrap;gap:1rem;">
+      <div>
+        <div class="section-heading__label">Latest Units</div>
+        <h2 class="section-heading__title">Available Now</h2>
+      </div>
+      <a href="listings.html" class="btn btn--ghost">View All →</a>
+    </div>
+    <div class="cards-grid" id="homeCards"></div>
+  </div>
+</section>
+
+<!-- ====== CTA BANNER ====== -->
+<section style="background:var(--navy);padding:5rem 0;">
+  <div class="container" style="text-align:center;">
+    <div style="font-size:0.75rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem;">Start Your Journey</div>
+    <h2 style="color:#fff;margin-bottom:1rem;max-width:520px;margin-left:auto;margin-right:auto;">Ready to Find Your Dubai Address?</h2>
+    <p style="color:rgba(255,255,255,0.6);margin-bottom:2rem;max-width:440px;margin-left:auto;margin-right:auto;">Our specialists are on hand seven days a week. Let us match you with properties that fit your lifestyle and investment goals.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+      <a href="listings.html" class="btn btn--primary">Browse Listings</a>
+      <a href="calculator.html" class="btn btn--outline">Calculate Mortgage</a>
+    </div>
+  </div>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div>
+        <div class="footer__logo">Better<span>Homes</span></div>
+        <p class="footer__about">Dubai's most trusted real estate agency since 1986 — helping families, investors and businesses find the perfect property across the UAE.</p>
+        <div class="footer__social">
+          <a href="#" class="footer__social-link" aria-label="Instagram">📷</a>
+          <a href="#" class="footer__social-link" aria-label="LinkedIn">💼</a>
+          <a href="#" class="footer__social-link" aria-label="Twitter/X">𝕏</a>
+          <a href="#" class="footer__social-link" aria-label="Facebook">f</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer__col-title">Quick Links</div>
+        <div class="footer__links">
+          <a href="listings.html">All Listings</a>
+          <a href="calculator.html">Mortgage Calculator</a>
+          <a href="compare.html">Compare Properties</a>
+          <a href="saved.html">Saved Properties</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer__col-title">Projects</div>
+        <div class="footer__links">
+          <a href="listings.html?project=Solen+Residence">Solen Residence</a>
+          <a href="listings.html?project=W+Residences">W Residences – JLT</a>
+          <a href="listings.html?project=City+Tower">City Tower</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer__col-title">Contact</div>
+        <div class="footer__links">
+          <a href="#">+971 4 344 7714</a>
+          <a href="#">info@bhomes.com</a>
+          <a href="#">Mall of Emirates Office</a>
+          <a href="#">Business Bay Branch</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div>© 2024 BetterHomes Real Estate LLC. All rights reserved.</div>
+      <div class="footer__rera">RERA Registered Broker · DED License No. 602844</div>
+    </div>
+  </div>
+</footer>
+
+<div id="toast" class="toast"></div>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  /* --- Featured grid --- */
+  const featGrid = document.getElementById('featuredGrid');
+  if (featGrid) {
+    featGrid.innerHTML = FEATURED_PROJECTS.map(p => `
+      <a href="listings.html?project=${encodeURIComponent(p.name)}" class="featured-card">
+        <img class="featured-card__img" src="${p.image}" alt="${p.name}" loading="lazy">
+        <div class="featured-card__overlay">
+          <div class="featured-card__tag">${p.tag}</div>
+          <div class="featured-card__title">${p.name}</div>
+          <div class="featured-card__sub">${p.location}</div>
+          <div class="featured-card__meta">
+            <span class="featured-card__meta-item">🏠 ${p.units} units available</span>
+            <span class="featured-card__meta-item">📅 ${p.handover}</span>
+          </div>
+          <span class="btn btn--primary btn--sm" style="align-self:flex-start;">
+            From ${formatPrice(p.from)} →
+          </span>
+        </div>
+      </a>
+    `).join('');
+  }
+
+  /* --- Home cards (6 sample) --- */
+  const homeCards = document.getElementById('homeCards');
+  if (homeCards) {
+    const sample = PROPERTIES.slice(0, 6);
+    homeCards.innerHTML = sample.map(p => renderCard(p)).join('');
+    bindSaveButtons(homeCards);
+    bindCompareButtons(homeCards);
+    initCardReveal();
+  }
+});
+</script>
+</body>
+</html>

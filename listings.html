@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Listings — BetterHomes Dubai</title>
+  <meta name="description" content="Browse all exclusive Dubai residential listings from Solen Residence, W Residences JLT, and City Tower.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav class="nav nav--solid">
+  <div class="container">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Better<span>Homes</span></a>
+      <ul class="nav__links">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="listings.html" class="nav__link">Listings</a></li>
+        <li><a href="calculator.html" class="nav__link">Calculator</a></li>
+        <li><a href="compare.html" class="nav__link">Compare</a></li>
+        <li>
+          <a href="saved.html" class="nav__link">
+            ♡ Saved
+            <span class="nav__saved-count" id="savedCount"></span>
+          </a>
+        </li>
+      </ul>
+      <button class="nav__hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile">
+      <a href="index.html" class="nav__link">Home</a>
+      <a href="listings.html" class="nav__link">Listings</a>
+      <a href="calculator.html" class="nav__link">Calculator</a>
+      <a href="compare.html" class="nav__link">Compare</a>
+      <a href="saved.html" class="nav__link">♡ Saved <span class="nav__saved-count"></span></a>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="container">
+    <div class="page-header__label">Exclusive Developments</div>
+    <h1 class="page-header__title">All Listings</h1>
+    <p class="page-header__sub">12 units across 3 landmark Dubai developments.</p>
+  </div>
+</div>
+
+<!-- LISTINGS -->
+<section class="section">
+  <div class="container">
+
+    <!-- Filter Bar -->
+    <div class="filter-bar">
+      <div class="filter-group">
+        <label for="filterProject">Location / Project</label>
+        <select id="filterProject">
+          <option value="">All Projects</option>
+          <option value="Solen Residence">Solen Residence</option>
+          <option value="W Residences Dubai – JLT">W Residences – JLT</option>
+          <option value="City Tower">City Tower</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="filterType">Property Type</label>
+        <select id="filterType">
+          <option value="">All Types</option>
+          <option value="Apartment">Apartment</option>
+          <option value="Penthouse">Penthouse</option>
+          <option value="Duplex">Duplex</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="filterBeds">Bedrooms</label>
+        <select id="filterBeds">
+          <option value="">Any</option>
+          <option value="0">Studio</option>
+          <option value="1">1BR</option>
+          <option value="2">2BR</option>
+          <option value="3">3BR</option>
+          <option value="4">4BR+</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="filterSort">Sort By</label>
+        <select id="filterSort">
+          <option value="default">Default</option>
+          <option value="price-asc">Price: Low → High</option>
+          <option value="price-desc">Price: High → Low</option>
+          <option value="size-asc">Size: Smallest First</option>
+          <option value="size-desc">Size: Largest First</option>
+        </select>
+      </div>
+      <div class="filter-results-count" id="resultsCount"></div>
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="cards-grid" id="listingsGrid"></div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div>
+        <div class="footer__logo">Better<span>Homes</span></div>
+        <p class="footer__about">Dubai's most trusted real estate agency since 1986.</p>
+        <div class="footer__social">
+          <a href="#" class="footer__social-link" aria-label="Instagram">📷</a>
+          <a href="#" class="footer__social-link" aria-label="LinkedIn">💼</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer__col-title">Quick Links</div>
+        <div class="footer__links">
+          <a href="listings.html">All Listings</a>
+          <a href="calculator.html">Mortgage Calculator</a>
+          <a href="compare.html">Compare</a>
+          <a href="saved.html">Saved</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer__col-title">Projects</div>
+        <div class="footer__links">
+          <a href="#">Solen Residence</a>
+          <a href="#">W Residences – JLT</a>
+          <a href="#">City Tower</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer__col-title">Contact</div>
+        <div class="footer__links">
+          <a href="#">+971 4 344 7714</a>
+          <a href="#">info@bhomes.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div>© 2024 BetterHomes Real Estate LLC. All rights reserved.</div>
+      <div class="footer__rera">RERA Registered Broker · DED License No. 602844</div>
+    </div>
+  </div>
+</footer>
+
+<div id="toast" class="toast"></div>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script>
+(function () {
+  const grid = document.getElementById('listingsGrid');
+  const projectSel = document.getElementById('filterProject');
+  const typeSel = document.getElementById('filterType');
+  const bedsSel = document.getElementById('filterBeds');
+  const sortSel = document.getElementById('filterSort');
+  const countEl = document.getElementById('resultsCount');
+
+  /* Pre-select from URL query param */
+  const params = new URLSearchParams(window.location.search);
+  const urlProject = params.get('project');
+  if (urlProject) {
+    Array.from(projectSel.options).forEach(o => {
+      if (o.value.toLowerCase().includes(urlProject.toLowerCase().substring(0, 8))) {
+        o.selected = true;
+      }
+    });
+  }
+
+  function getFiltered() {
+    let list = [...PROPERTIES];
+    const project = projectSel.value;
+    const type = typeSel.value;
+    const beds = bedsSel.value;
+    const sort = sortSel.value;
+
+    if (project) list = list.filter(p => p.project === project);
+    if (type) list = list.filter(p => p.type === type);
+    if (beds !== '') list = list.filter(p => String(p.beds) === beds);
+
+    if (sort === 'price-asc') list.sort((a, b) => a.price - b.price);
+    else if (sort === 'price-desc') list.sort((a, b) => b.price - a.price);
+    else if (sort === 'size-asc') list.sort((a, b) => a.size - b.size);
+    else if (sort === 'size-desc') list.sort((a, b) => b.size - a.size);
+
+    return list;
+  }
+
+  function render() {
+    const list = getFiltered();
+    countEl.innerHTML = `Showing <strong>${list.length}</strong> of <strong>${PROPERTIES.length}</strong> properties`;
+
+    if (!list.length) {
+      grid.innerHTML = `<div class="no-results"><div class="no-results__icon">🔍</div><p>No properties match your filters. Try adjusting your search.</p></div>`;
+      return;
+    }
+
+    grid.innerHTML = list.map(p => renderCard(p)).join('');
+
+    /* Re-init cards for animation */
+    grid.querySelectorAll('.property-card').forEach(c => {
+      c.style.opacity = '0';
+      c.style.transform = 'translateY(30px)';
+    });
+
+    bindSaveButtons(grid);
+    bindCompareButtons(grid);
+
+    requestAnimationFrame(() => {
+      grid.querySelectorAll('.property-card').forEach((c, i) => {
+        setTimeout(() => {
+          c.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+          c.style.opacity = '1';
+          c.style.transform = 'translateY(0)';
+        }, i * 80);
+      });
+    });
+  }
+
+  [projectSel, typeSel, bedsSel, sortSel].forEach(s => s.addEventListener('change', render));
+
+  document.addEventListener('DOMContentLoaded', render);
+})();
+</script>
+</body>
+</html>
