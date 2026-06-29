@@ -1,5 +1,5 @@
 /* ============================================================
-   BetterHomes Dubai — Property Data
+   Betterhomes Dubai — Property Data
    ============================================================ */
 
 const PROPERTIES = [
